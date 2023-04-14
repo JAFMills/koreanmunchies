@@ -13,11 +13,12 @@ body {
     max-width: 768px;
   }
   .tree .username {
+    
     color:#fff;
     font-weight: 600;
-    margin: 2em;
+    margin: 2em 0;
   }
-  .tree .username a {color:#fff;}
+  .tree .username a {color:#fff; text-decoration: none;}
   .tree .links {
     display: flex;
     flex-direction: column;
