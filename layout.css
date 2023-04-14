@@ -1,0 +1,52 @@
+body {
+    margin: 4em 2em;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-color:#0084ce;
+    color: #fff;
+  }
+  .tree {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    max-width: 768px;
+  }
+  .tree .username {
+    color:#fff;
+    font-weight: 600;
+    margin: 2em;
+  }
+  .tree .username a {color:#fff;}
+  .tree .links {
+    display: flex;
+    flex-direction: column;
+  }
+  .tree .links a {
+    position: relative;
+    margin: 0.75em auto;
+    width: 100%;
+  }
+  /* .insta::after {
+    content: "";
+    background-image: url("/instagram.svg");
+    background-repeat: no-repeat;
+    color: #fff;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    top: 50%;
+    left: 0;
+    
+  } */
+  .tree .footer {
+    margin: 2rem;
+  }
+  .tree .profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    text-align: center;
+  }
+  a.btn {
+    background-color: #fff;
+  }
