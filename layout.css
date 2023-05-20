@@ -1,53 +1,80 @@
+:root {
+  --navbar-color: #fff;
+}
+
 body {
-    margin: 4em 2em;
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
     background-color:#0084ce;
     color: #fff;
-  }
-  .tree {
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
-    max-width: 768px;
-  }
-  .tree .username {
-    
-    color:#fff;
-    font-weight: 600;
-    margin: 2em 0;
-  }
-  .tree .username a {color:#fff; text-decoration: none;}
-  .tree .links {
-    display: flex;
-    flex-direction: column;
-  }
-  .tree .links a {
     position: relative;
-    margin: 0.75em auto;
-    width: 100%;
+}
+nav {
+  width: fit-content;
+  position: absolute !important;
+  top: 0em;
+  right: 0em;
+  --bs-navbar-color: #fff !important;
+  --bs-navbar-toggler-border-color: none !important;
+  --bs-navbar-toggler-font-size: 1.8rem !important;
+}
+@media (min-width: 62em) {
+  .nav {
+    --bs-navbar-toggler-font-size: 2.5rem !important;
   }
-  /* .insta::after {
-    content: "";
-    background-image: url("/instagram.svg");
-    background-repeat: no-repeat;
-    color: #fff;
-    position: absolute;
-    width: 1em;
-    height: 1em;
-    top: 50%;
-    left: 0;
-    
-  } */
-  .tree .footer {
-    margin: 2rem;
+}
+.navbar-toggler {
+  filter: invert(100%) sepia(100%) saturate(7%) hue-rotate(168deg) brightness(102%) contrast(106%);
+}
+.offcanvas-title {
+  margin: auto;
+}
+.offcanvas {
+  --bs-heading-color: #f04323;
+  --bs-offcanvas-bg: #194399;
+  text-align: center;
+  font-size: 1.2em;
+}
+.offcanvas h5 { 
+  font-weight: 600;
+}
+
+.tree {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  max-width: 768px;
+}
+.tree .username {
+  color:#fff;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin: 2em 0 0.5em 0;
+}
+.tree .username a {color:#fff; text-decoration: none;}
+/* .insta::after {
+  content: "";
+  background-image: url("/instagram.svg");
+  background-repeat: no-repeat;
+  color: #fff;
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  top: 50%;
+  left: 0;
+} */
+.tree .footer {
+  margin: 2rem;
+}
+.tree .profile-pic {
+  width: 18em;
+  border-radius: 50%;
+  text-align: center;
+}
+
+@media (min-width: 48em) {
+  .tree .profile-pic { 
+    width: 35em;
   }
-  .tree .profile-pic {
-    width: 150px;
-    border-radius: 50%;
-    text-align: center;
-  }
-  a.btn {
-    background-color: #fff;
-  }
+}
+a.btn {
+  background-color: #fff;
+}
