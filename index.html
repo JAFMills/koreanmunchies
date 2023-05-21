@@ -31,16 +31,16 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" href="docs/assets/images/menu.jpg" target="_blank" >View Our Menu</a>
+                <a class="nav-link" href="docs/assets/downloads/koreanmunchies-menu.pdf" target="_blank" >View Our Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://www.instagram.com/korean.munchies_edinburgh/" target="_blank"><span class="insta">Instagram</span></a>
+                <a class="nav-link" href="https://www.instagram.com/koreanmunchies_uk/" target="_blank"><span class="insta">Instagram</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" target="_blank"><span>Facebook</span></a>
+                <a class="nav-link" href="https://www.twitch.tv/korean_chunkies" target="_blank"><span>Twitch</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" target="_blank"><span class="insta">TikTok</span></a>
+                <a class="nav-link" href="https://www.tiktok.com/@koreanmunchies_uk" target="_blank"><span class="insta">TikTok</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="https://goo.gl/maps/4Xw8ToJZxbvbjJLN7" target="_blank"><span class="insta">Google Maps</span></a>
@@ -54,16 +54,20 @@
   <main class="container-sm mt-3">
     <div class="tree">
         <div class="header"><img src="docs/assets/images/korean-munchies-logo.jpg" class="profile-pic" /></div>
-        <div class="username"><a href="https://www.instagram.com/korean.munchies_edinburgh/" target="_blank">@korean.munchies_edinburgh</a></div>
-        <p>12:00~20:30 Tue-Sun</p>
+        <div class="username"><a href="https://www.instagram.com/koreanmunchies_uk/" target="_blank">@koreanmunchies_uk</a></div>
+        <p>12:00~20:30, Open 7 days a week</p>
         <p>Korean Munchies Edinburgh <br> 26 Nicolson Street, Edinburgh</p>
         <footer class="footer">
-          Copyright &copy; 2023 Korean Munchies Edinburgh - All Rights Reserved.
+          Copyright &copy; <span id="autoyear"></span> Korean Munchies Edinburgh - All Rights Reserved.
         </footer>
       </div>
   </main>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-
+<script>
+  const date = new Date();
+  const year = date.getFullYear();
+  document.getElementById("autoyear").innerHTML = year;
+</script>
 </html>
