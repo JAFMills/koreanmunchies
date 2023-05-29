@@ -14,6 +14,7 @@ nav {
   --bs-navbar-color: #fff !important;
   --bs-navbar-toggler-border-color: none !important;
   --bs-navbar-toggler-font-size: 1.8rem !important;
+  z-index: 1;
 }
 @media (min-width: 62em) {
   .nav {
@@ -36,44 +37,179 @@ nav {
   font-weight: 600;
 }
 
+.header { 
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  background-image: url("docs/assets/images/pointer.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 4em;
+  height: 4em;
+  -webkit-animation: pulsate-fwd 5s ease-in-out infinite forwards;
+  animation: pulsate-fwd 5s ease-in-out infinite forwards;
+}
+@media (min-width: 48em) {
+  .header::before {
+    top: 32%;
+    left: 60%;
+    width: 6em;
+    height: 6em;
+  }
+}
+.header .profile-pic {
+  width: 18em;
+  border-radius: 50%;
+  text-align: center;
+}
+@media (min-width: 75em) {
+  .header .profile-pic { 
+    width: 35em;
+  }
+}
+.row .col-md-3 {
+  position: relative;
+}
+
+.row .col-md-3 .clothing-icon {
+  display: none;
+}
+.row .col-md-3 .nfts-icon{
+  display: none;
+}
+@media (min-width: 48em) {
+  .row .col-md-3 .clothing-icon {
+    display: block;
+    position: absolute;
+    bottom: -5em;
+    right: -2em;
+    width: 8em;
+    height: auto;
+    -webkit-animation: pulsate-fwd 5s ease-in-out infinite forwards;
+    animation: pulsate-fwd 5s ease-in-out infinite forwards;
+  }
+  .row .col-md-3 .nfts-icon {
+    display: block;
+    position: absolute;
+    bottom: -5em;
+    left: -4em;
+    width: 8em;
+    height: auto;
+    -webkit-animation: pulsate-fwd 5s ease-in-out infinite forwards;
+    animation: pulsate-fwd 5s ease-in-out infinite forwards;
+  }
+}
+@media (min-width: 75em) {
+  .row .col-md-3 .clothing-icon {
+    bottom: -4em;
+    right: -6em;
+    width: 12em;
+  }
+  .row .col-md-3 .nfts-icon{
+    bottom: -4em;
+    left: -6em;
+    width: 12em;
+  }
+}
 .tree {
   margin: 0 auto;
   text-align: center;
   width: 100%;
   max-width: 768px;
+  position: relative;
 }
-.tree .username {
+.tree .social-media-links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 28em;
+  margin: auto;
+  margin-top: 4em;
+  margin-bottom: 2em;
+}
+.tree .social-media-links a {
   color:#fff;
-  font-weight: 600;
-  font-size: 1.5em;
-  margin: 2em 0 0.5em 0;
+  font-size: 4em;
 }
-.tree .username a {color:#fff; text-decoration: none;}
-/* .insta::after {
-  content: "";
-  background-image: url("/instagram.svg");
-  background-repeat: no-repeat;
-  color: #fff;
-  position: absolute;
-  width: 1em;
-  height: 1em;
-  top: 50%;
-  left: 0;
-} */
 .tree .footer {
   margin: 2rem;
 }
-.tree .profile-pic {
-  width: 18em;
-  border-radius: 50%;
-  text-align: center;
-}
-
-@media (min-width: 48em) {
-  .tree .profile-pic { 
-    width: 35em;
-  }
-}
 a.btn {
   background-color: #fff;
+}
+@-webkit-keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+span.tooltip-1, span.tooltip-2 {
+  position: relative;
+}
+span.tooltip-1::before, span.tooltip-2::before {
+  content: attr(data-text); /* here's the magic */
+  position:absolute;
+  display: inline-block;
+  bottom: -2em;
+  left: -13em;
+  height: auto;
+  width: 10em;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  background: linear-gradient(71deg, #080509, #1a171c, #080509);
+  background-clip: padding-box;
+  border-radius: 1em;
+  color: #fff;
+  text-align:center;
+}
+span.tooltip-2::before {
+  left: -7em;
+} 
+@media (min-width: 48em) {
+  span.tooltip-1::before{ 
+    bottom: 2em;
+    left: -4em;
+  }
+  span.tooltip-2::before {
+    bottom: 2em;
+    left: 4em;
+  }
+}
+@media (min-width: 75em) {
+  span.tooltip-1::before { 
+    bottom: -10em;
+    left: -13em;
+  }
+  span.tooltip-2::before {
+    bottom: -10em;
+    left: -6em;
+  }
 }
